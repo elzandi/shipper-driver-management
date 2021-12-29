@@ -6,6 +6,7 @@ import { getSliceData } from "utils";
 import Loading from "components/atom/Loading";
 import HeaderTitle from "components/molecule/HeaderTitle";
 import DriverItem from "components/molecule/DriverItem";
+import Pagination from "components/atom/Pagination";
 
 import "assets/scss/driver.scss";
 
@@ -34,7 +35,7 @@ const Driver = () => {
 
     const handleSearch = (value) => {
         dispatch(searchDriver(value));
-        navigate.push('/');
+        navigate('/');
     };
 
     return (
@@ -55,9 +56,10 @@ const Driver = () => {
                             <DriverItem driver={driver} key={index} />
                         ))}
                     </div>
+                    <Pagination total={drivers.length} limit={limit} current={getSlice.page} />
                 </Fragment> ):(
                 <div className="alert margin__left--24px margin__right--24px">
-                    <h5 className="color__grey font__weight--500">Data yang anda cari tidak ditemukan</h5>
+                    <h5 className="color__grey font__weight--500">Data yang dicari tidak ditemukan</h5>
                 </div>
             )}
         </Fragment>

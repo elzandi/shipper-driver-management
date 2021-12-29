@@ -22,6 +22,15 @@ html, body{
 .display--flex{display: flex;}
 .justify__content--center{justify-content: center;}
 .align__items--center{align-items: center;}
+.flex__direction--column{flex-direction: column;}
 
 *{box-sizing: border-box; margin: 0;}
 a{color: inherit;text-decoration: inherit;}
+
+.alert{
+  background-color: $colorWhite;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.cursor--pointer{cursor: pointer;}

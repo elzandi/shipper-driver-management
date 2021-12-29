@@ -1,5 +1,4 @@
 import { AiOutlineEllipsis } from "libraries/icon";
-import { userImage } from "libraries/image";
 import { convertDate } from "utils";
 import DriverItemLabel from "components/molecule/DriverLabel";
 
@@ -14,7 +13,7 @@ const DriverItem = ({driver}) => {
                 <AiOutlineEllipsis className="color__grey font__size--18" />
             </div>
             <div className="item__body">
-                <img src={driver.picture.thumbnail} alt={driver.name.first} className="avatar" onError={userImage.image} />
+                <img src={driver.picture.thumbnail} alt={driver.name.first} className="avatar" />
                 <div>
                     <DriverItemLabel label="Nama Driver" value={`${driver.name.first}, ${driver.name.last}`} />
                     <DriverItemLabel label="Telepon" value={driver.phone} />
