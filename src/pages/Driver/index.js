@@ -3,10 +3,10 @@ import { driverSelector, searchDriver } from "modules";
 import { getDrivers } from "services";
 import { getSliceData } from "utils";
 
-import Loading from "components/atom/Loading";
-import HeaderTitle from "components/molecule/HeaderTitle";
-import DriverItem from "components/molecule/DriverItem";
-import Pagination from "components/atom/Pagination";
+import Loading from "components/Loading";
+import HeaderTitle from "components/HeaderTitle";
+import DriverItem from "components/DriverItem";
+import Pagination from "components/Pagination";
 
 import "assets/scss/driver.scss";
 

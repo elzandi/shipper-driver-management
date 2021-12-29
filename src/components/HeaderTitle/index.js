@@ -1,6 +1,6 @@
 import { AiOutlinePlus, AiOutlineSearch } from "libraries/icon";
-import TextSearch from "components/atom/TextSearch";
-import Button from "components/atom/Button";
+import TextSearch from "components/TextSearch";
+import Button from "components/Button";
 import "assets/scss/header.scss";
 
 const HeaderTitle = (props) => {

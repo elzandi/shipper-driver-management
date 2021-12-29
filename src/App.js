@@ -1,7 +1,7 @@
 import { Fragment, Routes, Route, BrowserRouter, Provider, lazy, Suspense } from "libraries";
 import { store } from "modules";
 import routes from "routes";
-import Loading from "components/atom/Loading";
+import Loading from "components/Loading";
 import "assets/scss/global.scss";
 
 const MainContainer = lazy(() => import('containers/MainContainer'));

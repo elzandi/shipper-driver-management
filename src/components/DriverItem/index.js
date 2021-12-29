@@ -1,6 +1,6 @@
 import { AiOutlineEllipsis } from "libraries/icon";
 import { convertDate } from "utils";
-import DriverItemLabel from "components/molecule/DriverLabel";
+import DriverItemLabel from "components/DriverLabel";
 
 const DriverItem = ({driver}) => {
 
