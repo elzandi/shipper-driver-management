@@ -12,9 +12,9 @@ const MainContainer = (props) => {
                 <SidebarContainer />
                 <div className="main__layout">
                     <NavbarContainer />
-                </div>
-                <div className="main__content">
-                    {props.children}
+                    <div className="main__content">
+                        {props.children}
+                    </div>
                 </div>
             </div>
         </Fragment>
