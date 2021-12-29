@@ -1,2 +1,2 @@
-import { AiOutlineMenu } from 'react-icons/ai';
-export { AiOutlineMenu };
+import { AiOutlineMenu, AiOutlineHome, AiOutlineTeam, AiTwotoneCalendar } from 'react-icons/ai';
+export { AiOutlineMenu, AiOutlineHome, AiOutlineTeam, AiTwotoneCalendar };

@@ -11,13 +11,13 @@ function App() {
         <Fragment>
             <Provider store={store}>
                 <Suspense fallback={<Loading />}>
-                    <MainContainer>
-                        <BrowserRouter>
+                    <BrowserRouter>
+                        <MainContainer>
                             <Routes>
                                 {routes.map((route, index) => <Route {...route} key={index} />)}
                             </Routes>
-                        </BrowserRouter>
-                    </MainContainer>
+                        </MainContainer>
+                    </BrowserRouter>
                 </Suspense>
             </Provider>
         </Fragment>

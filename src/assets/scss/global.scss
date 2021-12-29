@@ -22,3 +22,6 @@ html, body{
 .display--flex{display: flex;}
 .justify__content--center{justify-content: center;}
 .align__items--center{align-items: center;}
+
+*{box-sizing: border-box; margin: 0;}
+a{color: inherit;text-decoration: inherit;}
