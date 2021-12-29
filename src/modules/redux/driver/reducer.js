@@ -9,8 +9,8 @@ const initialState = {
 const getDriver = (state, action) => {
     return updateObject(state, {
         ...state,
-        originalListDrivers: action.data,
-        drivers: action.data
+        originalListDrivers: action.data.results,
+        drivers: action.data.results
     });
 };
 

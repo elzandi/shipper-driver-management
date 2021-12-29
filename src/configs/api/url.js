@@ -1,4 +1,4 @@
-import appConfig from "configs/appConfigs";
+import appConfig from "../appConfigs";
 
 export const config = appConfig;
 

@@ -1,4 +1,4 @@
-import { Fragment } from "libraries";
+import { Fragment, Notifications } from "libraries";
 import "assets/scss/layout.scss";
 
 import NavbarContainer from "containers/NavbarContainer";
@@ -9,6 +9,7 @@ const MainContainer = (props) => {
     return (
         <Fragment>
             <div className="container">
+                <Notifications />
                 <SidebarContainer />
                 <div className="main__layout">
                     <NavbarContainer />

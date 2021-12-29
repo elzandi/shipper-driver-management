@@ -1,3 +1,6 @@
+import { AiOutlinePlus, AiOutlineSearch } from "libraries/icon";
+import TextSearch from "components/atom/TextSearch";
+import Button from "components/atom/Button";
 import "assets/scss/header.scss";
 
 const HeaderTitle = (props) => {
@@ -9,7 +12,15 @@ const HeaderTitle = (props) => {
                 <h5 className="font__weight--400">{props.description}</h5>
             </div>
             <div className="header__content">
-                {props.children}
+                <TextSearch
+                    onChange={(e) => props.onChangeSearch(e.target.value)}
+                    placeholder="Cari Driver"
+                    icon={<AiOutlineSearch className="icon font__size--18 color__primary" />}
+                />
+                <Button type={'primary'}>
+                    <span className="text__transform--uppercase">Tambah Driver</span>
+                    <AiOutlinePlus className="font__size--18 margin__left--8px" />
+                </Button>
             </div>
         </div>
     );
