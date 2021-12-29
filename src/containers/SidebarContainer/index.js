@@ -1,15 +1,21 @@
-import { Fragment, Link } from "libraries";
+import { Fragment, Link, useSelector, useDispatch } from "libraries";
 import { logo } from "libraries/image";
 import { AiOutlineHome, AiOutlineTeam, AiTwotoneCalendar } from "libraries/icon";
+import { menuSelector, toggleMenu } from "modules";
 
 const SidebarContainer = () => {
 
-    const showMenu = false;
+    const showMenu = useSelector(menuSelector);
+    const dispatch = useDispatch();
+
+    const closeMenu = () => {
+        dispatch(toggleMenu(false));
+    };
 
     return (
         <Fragment>
             {showMenu &&
-                <div className="overlay" />
+                <div className="overlay" onClick={closeMenu} />
             }
             <div className={`sidebar ${showMenu ? 'show' : ''}`}>
                 <div className="logo margin__bottom--16px">
