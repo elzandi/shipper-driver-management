@@ -18,7 +18,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid $colorWhite;
+      border-bottom: 1px solid $colorBorder;
       border-radius: 8px 8px 0 0;
     }
     .item__body{
@@ -31,6 +31,8 @@
       }
       .item__label{
         margin-top: 16px;
+        word-break: break-word;
+        white-space: pre-wrap;
       }
     }
     @media(max-width: $resolutionMobile){

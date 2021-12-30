@@ -1,5 +1,15 @@
-import { Fragment, Helmet, useDispatch, useSelector, useEffect, useState, useLocation, useNavigate } from "libraries";
-import { driverSelector, searchDriver } from "modules";
+import {
+    Fragment,
+    Helmet,
+    useDispatch,
+    useSelector,
+    useEffect,
+    useState,
+    useLocation,
+    useNavigate,
+    Localbase
+} from "libraries";
+import { driverSelector, searchDriver, getDriver } from "modules";
 import { getDrivers } from "services";
 import { getSliceData } from "utils";
 
@@ -24,14 +34,17 @@ const Driver = () => {
     const [ isLoading, setIsLoading ] = useState(true);
 
     useEffect(() => {
+        const localDb = new Localbase('shipper');
         const getDiver = async () => {
             const payload = { params: { results: 30 } };
             await getDrivers(payload);
-            setIsLoading(false);
         };
 
-        getDiver();
-    }, []);
+        localDb.collection('driver').get().then(collections => {
+            if (collections.length === 0 ? getDiver() : dispatch(getDriver(collections[0])));
+            setIsLoading(false);
+        });
+    }, [dispatch]);
 
     const handleSearch = (value) => {
         dispatch(searchDriver(value));

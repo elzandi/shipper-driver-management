@@ -1,4 +1,5 @@
-import { moment } from "libraries";
+import { Localbase, moment } from "libraries";
+const localDb = new Localbase('shipper');
 
 export const getPath = (path = "") => (path ? `/${path}` : "");
 
@@ -60,4 +61,8 @@ export const getSliceData = (params, limit) => {
 export const getIdentityFromHref = (href) => {
     const url = href.replace(/\/$/, '');
     return url.substring(url.lastIndexOf('/') + 1);
+};
+
+export const addDbCollection = (table, value) => {
+    localDb.collection(table).add(value);
 };
