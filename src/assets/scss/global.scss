@@ -34,3 +34,13 @@ a{color: inherit;text-decoration: inherit;}
 }
 
 .cursor--pointer{cursor: pointer;}
+
+// Toast
+.toast-notification{
+  width: 96% !important;
+  text-align: right !important;
+  top: 30px !important;
+  span{
+    border-radius: 5px !important;
+  }
+}

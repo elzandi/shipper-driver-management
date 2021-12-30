@@ -1,4 +1,4 @@
-import { axios } from "libraries";
+import { axios, notify } from "libraries";
 import { getPath, getCustomUrl, createUrlParamFromObj, getContentType, createHeader } from "utils";
 import appConfigs from "configs/appConfigs";
 
@@ -30,13 +30,7 @@ class ApiRequest {
             }
             return { axiosResponse: response, ...response };
         } catch (err) {
-            if (err && err.response && err.response.data) {
-                return err.response.data;
-            } else if (err && err.response) {
-                return err.response;
-            } else {
-                return err;
-            }
+            notify.show('Terjadi kesalahan pada pengambilan data', 'error');
         }
     };
 
